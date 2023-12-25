@@ -3,7 +3,17 @@ Marine
 Aldrin Benjamín Guzmán Figueroa
 abgf3@alu.ua.es
 */
+/*--Body--*/
+body#pi {
+    background-image: url("tokyo-night.png");
+}
+/*--fin body--*/
 /*--Contenedor--*/
+div#contenedor {
+    background-color: #2ad9ef;
+	width: 90%;
+	margin: auto;
+}
 /*--Intro--*/
 div#titulo h1 {
     font-size: 5vw;
@@ -19,27 +29,34 @@ div#titulo h2 {
     margin: 0px;
     padding: 0.5em 1em;
 }
-ul.ul1 {
+div#resumen {
+    margin: 0px 3em;
+}
+div#resumen ul.ul1 {
     padding: 0px;
     list-style: none;
     display: inline-grid;
     grid-template-columns: auto auto auto;
+	border: 5px solid #7df9ff;
+}
+div#comentario {
+    border: 5px solid #fdefef;
+    background-color: #b797bd;
+    width: 50%;
+    position: relative;
+    left: 45%;
 }
 /*--fin intro--*/
 /*--fin contenedor--*/
 /*--Todos--*/
 li {
     word-break: break-word;
+    margin: 6px;
+    padding: 3px;
+    background-color: #2fc8ff;
 }
-body#pi {
-    background-image: url("tokyo-night.png");
+p{
+	margin: 1em 0.5em;
 }
-div#contenedor {
-    background-color: #2ad9ef;
-	width: 90%;
-	margin: auto;
-}
-div#resumen {
-    margin: 0px 6em;
-}
+
 /*--fin todos--*/
