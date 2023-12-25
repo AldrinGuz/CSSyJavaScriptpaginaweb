@@ -1,0 +1,45 @@
+/*
+Marine
+Aldrin Benjamín Guzmán Figueroa
+abgf3@alu.ua.es
+*/
+/*--Contenedor--*/
+/*--Intro--*/
+div#titulo h1 {
+    font-size: 5vw;
+    background-color: #ff84b3;
+    padding: 0.5em 1em;
+    border: 5px solid #ffad7d;
+    margin-bottom: 0px;
+}
+div#titulo h2 {
+    font-size: 3vw;
+    text-align: center;
+    background-color: #ffb1eb;
+    margin: 0px;
+    padding: 0.5em 1em;
+}
+ul.ul1 {
+    padding: 0px;
+    list-style: none;
+    display: inline-grid;
+    grid-template-columns: auto auto auto;
+}
+/*--fin intro--*/
+/*--fin contenedor--*/
+/*--Todos--*/
+li {
+    word-break: break-word;
+}
+body#pi {
+    background-image: url("tokyo-night.png");
+}
+div#contenedor {
+    background-color: #2ad9ef;
+	width: 90%;
+	margin: auto;
+}
+div#resumen {
+    margin: 0px 6em;
+}
+/*--fin todos--*/
