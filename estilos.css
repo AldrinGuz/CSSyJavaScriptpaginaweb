@@ -1,27 +1,189 @@
 /*
-Marine
+Tokyo lullaby
 Aldrin Benjamín Guzmán Figueroa
 abgf3@alu.ua.es
 */
-/*--Contenedor--*/
+/*--Body--*/
+body#pi {
+    background-image: url("tokyo-night.png");
+}
+/*--fin body--*/
+/*--/Contenedor/--*/
+div#contenedor {
+    background-color: var(--color1, azure);
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-areas: 'header header'
+        'left intra'
+        'left main'
+        'footer footer';
+}
 /*--Intro--*/
-div#titulo h1{
-    font-size: 10vw;
+div#intro {
+    grid-area: header;
+	padding-bottom: 2em;
 }
-div#titulo h2{
-    font-size: 7vw;
-	text-align: center;
+div#titulo h1 {
+    font-size: 5vw;
+    background-color: var(--color2, pink);
+    padding: 0.5em 1em;
+    border: 5px solid var(--color3, palevioletred);
+    margin-bottom: 0px;
 }
-ul.ul1 {
-    padding: 0px;
-    list-style: none;
+div#titulo h2 {
+    font-size: 3vw;
+    text-align: center;
+    background-color: var(--color4, antiquewhite);
+    margin: 0px;
+    padding: 0.5em 1em;
+}
+div#resumen {
+	background-color: #3A156E;
+    margin: 0px 3em;
+}
+div#resumen ul.ul1 {
     display: inline-grid;
+    gap: 10px;
     grid-template-columns: auto auto auto;
+    background-color: var(--color5);
+    border: 5px solid var(--color5, cornflowerblue);
+}
+div#resumen li {
+    background-color: var(--color1);
+    margin: 0px;
+	padding: 1em;
+}
+div#resumen p, div#resumen li {
+    color: #F184CA;
+}
+div#comentario {
+    border: 5px solid var(--color6, beige);
+    background-color: var(--color7, mediumpurple);
+    width: 50%;
+    position: relative;
+    left: 45%;
 }
 /*--fin intro--*/
-/*--fin contenedor--*/
+/*--Enlacesintra--*/
+div#enlacesintra {
+    grid-area: intra;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 1em;
+}
+div#enlacesintra h3.intra, div#enlacesintra ul.ul1 {
+    background-color: #F18CDC;
+    padding: 1em;
+    margin: 0px;
+    border-radius: 10px;
+}
+/*--fin enlacesintra--*/
+/*--Apartados--*/
+div#apartados {
+    grid-area: main;
+    background-color: var(--color10);
+    margin: 0.5em 2em;
+}
+div#apartados div {
+    padding: 0.25em 1em;
+}
+div#objetivos, div#profesores {
+    background: var(--color9);
+}
+div#contenidos ul.ul1 {
+    background-color: var(--color1);
+    display: grid;
+}
+div#contenidos ul.ul1 li {
+    background-color: var(--color9);
+    display: flex;
+    align-items: center;
+}
+div#contenidos li > ul li {
+    margin: 0px;
+    border-left: 3px solid var(--color1);
+}
+ul.ul2 {
+    list-style-type: circle;
+    margin: 0em 1em;
+}
+div#profesores dl {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+div#profesores dd {
+    width: 50%;
+    margin: 3px 0px;
+    padding-left: 10px;
+    border-left: 2px solid var(--color1);
+}
+/*--fin apartados--*/
+/*--Enlaces--*/
+div#enlaces {
+    grid-area: left;
+    background-color: #FF0C47;
+    display: flex;
+    flex-direction: column;
+    width: 12em;
+}
+div#enlaces div {
+    padding: 0.5em;
+}
+div#lhistorico, div#lrecursos {
+    border-top: 3px solid var(--color1);
+}
+/*--fin enlaces--*/
+/*--Enlacesversiones--*/
+div#enlacesversiones {
+    grid-area: footer;
+    background-color: var(--color8);
+}
+h3.versiones {
+    margin: 0px;
+    padding: 0.5em 1em;
+    color: var(--color6);
+}
+div#enlacesversiones ul.ul1 {
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 0px;
+    justify-content: space-evenly;
+}
+div#enlacesversiones a {
+    color: var(--color6);
+}
+/*--fin enlacesversiones*/
+/*--/fin contenedor/--*/
 /*--Todos--*/
+:root {
+	--color10: #0C83CD;/*https://palett.es/f18cdc-a42cc1-26163b-3a156e-6b1bc0*/
+	--color2: #ff84b3;
+	--color3: #ffad7d;
+	--color4: #ffb1eb;
+	--color5: #7df9ff;
+	--color6: #fdefef;
+	--color7: #b797bd;
+	--color8: #05005d;
+	--color9: #6394ed;
+	--color1: #3A156E;
+}
 li {
     word-break: break-word;
+    margin: 6px;
+    padding: 3px;
+}
+ul {
+	list-style: none;
+	padding: 0px;
+}
+p{
+	margin: 1em 0.5em;
+}
+a {
+    /*text-decoration: none;*/
+    color: black;
 }
 /*--fin todos--*/

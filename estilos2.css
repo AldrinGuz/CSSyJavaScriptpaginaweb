@@ -1,5 +1,5 @@
 /*
-Marine
+Tokyo lullaby
 Aldrin Benjamín Guzmán Figueroa
 abgf3@alu.ua.es
 */
@@ -22,6 +22,7 @@ div#contenedor {
 /*--Intro--*/
 div#intro {
     grid-area: header;
+	padding-bottom: 2em;
 }
 div#titulo h1 {
     font-size: 5vw;
@@ -43,8 +44,15 @@ div#resumen {
 }
 div#resumen ul.ul1 {
     display: inline-grid;
+    gap: 10px;
     grid-template-columns: auto auto auto;
-	border: 5px solid var(--color5, cornflowerblue);
+    background-color: var(--color5);
+    border: 5px solid var(--color5, cornflowerblue);
+}
+div#resumen li {
+    background-color: var(--color1);
+    margin: 0px;
+	padding: 1em;
 }
 div#resumen p, div#resumen li {
     color: #F184CA;
@@ -88,14 +96,29 @@ div#contenidos ul.ul1 {
     background-color: var(--color1);
     display: grid;
 }
-div#contenidos li {
-    background-color: var(--color10);
+div#contenidos ul.ul1 li {
+    background-color: var(--color9);
     display: flex;
     align-items: center;
 }
 div#contenidos li > ul li {
     margin: 0px;
     border-left: 3px solid var(--color1);
+}
+ul.ul2 {
+    list-style-type: circle;
+    margin: 0em 1em;
+}
+div#profesores dl {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+div#profesores dd {
+    width: 50%;
+    margin: 3px 0px;
+    padding-left: 10px;
+    border-left: 2px solid var(--color1);
 }
 /*--fin apartados--*/
 /*--Enlaces--*/
@@ -109,7 +132,9 @@ div#enlaces {
 div#enlaces div {
     padding: 0.5em;
 }
-
+div#lhistorico, div#lrecursos {
+    border-top: 3px solid var(--color1);
+}
 /*--fin enlaces--*/
 /*--Enlacesversiones--*/
 div#enlacesversiones {
@@ -158,7 +183,7 @@ p{
 	margin: 1em 0.5em;
 }
 a {
-    text-decoration: none;
+    /*text-decoration: none;*/
     color: black;
 }
 /*--fin todos--*/
