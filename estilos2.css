@@ -3,6 +3,12 @@ Tokyo lullaby
 Aldrin Benjamín Guzmán Figueroa
 abgf3@alu.ua.es
 */
+@import url('https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+/*--html--*/
+html {
+	font-family: 'Tinos', serif;
+}
+/*----*/
 /*--Body--*/
 body#pi {
     background-image: url("tokyo-night.png");
@@ -28,7 +34,7 @@ div#titulo h2 {
     padding: 0.5em 1em;
 }
 div#resumen {
-	background-color: #3A156E;
+	background-color: var(--color1);
 }
 div#resumen ul.ul1 {
     display: grid;
@@ -42,7 +48,7 @@ div#resumen li {
 	padding: 1em;
 }
 div#resumen p, div#resumen li {
-    color: #F184CA;
+    color: var(--color2);
 }
 div#comentario {
     border: 5px solid var(--color6, beige);
@@ -58,7 +64,7 @@ div#enlacesintra {
     margin: 1em;
 }
 div#enlacesintra h3.intra, div#enlacesintra ul.ul1 {
-    background-color: #F18CDC;
+    background-color: var(--color2);
     padding: 1em;
     margin: 0px;
     border-radius: 10px;
@@ -106,6 +112,9 @@ div#profesores dd {
     margin: 3px 0px;
     padding-left: 10px;
     border-left: 2px solid var(--color1);
+}
+div#bibliografia dt {
+    font-weight: bold;
 }
 /*--fin apartados--*/
 /*--Enlaces--*/
@@ -160,7 +169,7 @@ div#enlacesversiones a {
 	--color6: #fdefef;
 	--color7: #b797bd;
 	--color8: #05005d;
-	--color9: #6394ed;
+	--color9: #6696F0;
 	--color10: #0C83CD;
 	--color11: #FF0C47;
 }
@@ -180,7 +189,14 @@ a {
     /*text-decoration: none;*/
     color: black;
 }
-
+a:hover {
+    background-color: white;
+    padding: 3px;
+    border-radius: 12px;
+}
+div#enlacesversiones a:hover {
+	color: black;
+}
 /*--fin todos--*/
 /*--queries--*/
 @media (min-width: 600px){
@@ -210,7 +226,6 @@ a {
 		font-size: 3vw;
 	}
 	div#resumen {
-		background-color: #3A156E;
 		margin: 0px 3em;
 	}
 	div#resumen ul.ul1 {
@@ -292,5 +307,34 @@ a {
 	}
 	/*--fin enlaces--*/
 }
-
+@media (prefers-contrast: more){
+	:root {
+		--color1: #3A156E;
+		--color2: #ffb1eb;
+		--color3: #ffad7d;
+		--color4: #ffb1eb;
+		--color5: #70A2FF;
+		--color6: #fdefef;
+		--color7: #b797bd;
+		--color8: #05005d;
+		--color9: #70A2FF;
+		--color10: #70A2FF;
+		--color11: #ff84b3;
+	}
+}
+@media (prefers-color-scheme: light){
+	:root {
+		--color1: #3A156E;
+		--color2: #ffb1eb;
+		--color3: #ffad7d;
+		--color4: #ffb1eb;
+		--color5: #70A2FF;
+		--color6: #fdefef;
+		--color7: #b797bd;
+		--color8: #05005d;
+		--color9: #70A2FF;
+		--color10: #70A2FF;
+		--color11: #ff84b3;
+	}
+}
 /*--fin queries--*/
