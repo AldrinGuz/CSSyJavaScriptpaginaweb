@@ -324,17 +324,20 @@ div#enlacesversiones a:hover {
 }
 @media (prefers-color-scheme: light){
 	:root {
-		--color1: #3A156E;
-		--color2: #ffb1eb;
+		--color1: #4CC9DB;
+		--color2: #E7933F;
 		--color3: #ffad7d;
-		--color4: #ffb1eb;
-		--color5: #70A2FF;
+		--color4: #DCC958;
+		--color5: #D65530;
 		--color6: #fdefef;
-		--color7: #b797bd;
+		--color7: #E2B39F;
 		--color8: #05005d;
-		--color9: #70A2FF;
-		--color10: #70A2FF;
-		--color11: #ff84b3;
+		--color9: #49abaf;
+		--color10: #49bf60;
+		--color11: #e93868;
+	}
+	div#resumen p, div#resumen li {
+		color: var(--color8);
 	}
 }
 /*--fin queries--*/
