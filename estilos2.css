@@ -11,28 +11,17 @@ body#pi {
 /*--/Contenedor/--*/
 div#contenedor {
     background-color: var(--color1, azure);
-    width: 90%;
-    margin: auto;
-    display: grid;
-    grid-template-areas: 'header header'
-        'left intra'
-        'left main'
-        'footer footer';
 }
 /*--Intro--*/
-div#intro {
-    grid-area: header;
-	padding-bottom: 2em;
-}
 div#titulo h1 {
-    font-size: 5vw;
+    font-size: 9vw;
     background-color: var(--color2, pink);
-    padding: 0.5em 1em;
+    padding: 0.5em 0.5em;
     border: 5px solid var(--color3, palevioletred);
     margin-bottom: 0px;
 }
 div#titulo h2 {
-    font-size: 3vw;
+    font-size: 6vw;
     text-align: center;
     background-color: var(--color4, antiquewhite);
     margin: 0px;
@@ -40,12 +29,10 @@ div#titulo h2 {
 }
 div#resumen {
 	background-color: #3A156E;
-    margin: 0px 3em;
 }
 div#resumen ul.ul1 {
-    display: inline-grid;
-    gap: 10px;
-    grid-template-columns: auto auto auto;
+    display: grid;
+    gap: 5px;
     background-color: var(--color5);
     border: 5px solid var(--color5, cornflowerblue);
 }
@@ -60,9 +47,6 @@ div#resumen p, div#resumen li {
 div#comentario {
     border: 5px solid var(--color6, beige);
     background-color: var(--color7, mediumpurple);
-    width: 50%;
-    position: relative;
-    left: 45%;
 }
 /*--fin intro--*/
 /*--Enlacesintra--*/
@@ -82,9 +66,8 @@ div#enlacesintra h3.intra, div#enlacesintra ul.ul1 {
 /*--fin enlacesintra--*/
 /*--Apartados--*/
 div#apartados {
-    grid-area: main;
     background-color: var(--color10);
-    margin: 0.5em 2em;
+    margin: 0.5em 0.5em;
 }
 div#apartados div {
     padding: 0.25em 1em;
@@ -100,14 +83,18 @@ div#contenidos ul.ul1 li {
     background-color: var(--color9);
     display: flex;
     align-items: center;
+	flex-direction: column;
 }
-div#contenidos li > ul li {
-    margin: 0px;
-    border-left: 3px solid var(--color1);
+div#contenidos ul.ul1 li ul {
+	margin-left: 5px;
+    border-top: 3px solid var(--color1);
 }
 ul.ul2 {
     list-style-type: circle;
     margin: 0em 1em;
+}
+div#profesores dt {
+	width: 40%;
 }
 div#profesores dl {
     display: flex;
@@ -124,16 +111,22 @@ div#profesores dd {
 /*--Enlaces--*/
 div#enlaces {
     grid-area: left;
-    background-color: #FF0C47;
+    background-color: var(--color11);
+    background-image: url('japan.jpg');
+    background-size: 100%;
+    background-repeat: round;
     display: flex;
     flex-direction: column;
-    width: 12em;
 }
 div#enlaces div {
     padding: 0.5em;
 }
+div#lselecciona {
+	background-color: var(--color11);
+}
 div#lhistorico, div#lrecursos {
     border-top: 3px solid var(--color1);
+	background-color: var(--color11);
 }
 /*--fin enlaces--*/
 /*--Enlacesversiones--*/
@@ -159,7 +152,7 @@ div#enlacesversiones a {
 /*--/fin contenedor/--*/
 /*--Todos--*/
 :root {
-	--color10: #0C83CD;/*https://palett.es/f18cdc-a42cc1-26163b-3a156e-6b1bc0*/
+	--color1: #3A156E;/*https://palett.es/f18cdc-a42cc1-26163b-3a156e-6b1bc0*/
 	--color2: #ff84b3;
 	--color3: #ffad7d;
 	--color4: #ffb1eb;
@@ -168,7 +161,8 @@ div#enlacesversiones a {
 	--color7: #b797bd;
 	--color8: #05005d;
 	--color9: #6394ed;
-	--color1: #3A156E;
+	--color10: #0C83CD;
+	--color11: #FF0C47;
 }
 li {
     word-break: break-word;
@@ -186,4 +180,117 @@ a {
     /*text-decoration: none;*/
     color: black;
 }
+
 /*--fin todos--*/
+/*--queries--*/
+@media (min-width: 600px){
+	div#contenedor {
+		width: 90%;
+		margin: auto;
+		display: grid;
+		grid-template-areas: 'header header'
+			'left intra'
+			'left main'
+			'footer footer';
+	}
+	/*--Intro--*/
+	div#intro {
+		grid-area: header;
+		padding-bottom: 2em;
+		background-image: url('bonsai.png');
+		background-repeat: no-repeat;
+		background-position: 100px bottom;
+		background-size: 20%;
+	}
+	div#titulo h1 {
+		font-size: 5vw;
+		padding: 0.5em 1em;
+	}
+	div#titulo h2 {
+		font-size: 3vw;
+	}
+	div#resumen {
+		background-color: #3A156E;
+		margin: 0px 3em;
+	}
+	div#resumen ul.ul1 {
+		display: inline-grid;
+		gap: 10px;
+		grid-template-columns: auto auto auto;
+	}
+	div#comentario {
+		background-image: url('jap.png');
+		background-repeat: no-repeat;
+		background-size: 5%;
+		background-position: right bottom;
+		width: 50%;
+		position: relative;
+		left: 45%;
+	}
+	/*--fin intro--*/
+	/*--Apartados--*/
+	div#apartados {
+		grid-area: main;
+		margin: 0.5em 2em;
+	}
+	div#contenidos ul.ul1 li {
+		flex-direction: row;
+	}
+	div#contenidos ul.ul1 li ul {
+		border-top: none;
+	}
+	div#contenidos li > ul li {
+		margin: 0px;
+		border-left: 3px solid var(--color1);
+	}
+	/*--fin apartados--*/
+	/*--Enlaces--*/
+	div#enlaces {
+		grid-area: left;
+		flex-direction: column;
+		width: 12em;
+	}
+	/*--fin enlaces--*/
+	/*--Extra--*/
+	div#extraDiv1 {
+		background-image: url('logo-cerezo.png');
+		background-repeat: no-repeat;
+		background-size: 80%;
+		background-position: right top;
+		width: 12%;
+		height: 8em;
+		position: absolute;
+		right: 5em;
+		top: 1em;
+	}
+	
+	/*--fin extra--*/
+}
+@media (max-width: 425px){
+	/*--Apartados--*/
+	div#profesores dl {
+		flex-direction: column;
+	}
+	/*--fin apartados--*/
+}
+@media (min-width: 615px) and (max-width: 735px){
+	/*--Apartados--*/
+	div#profesores dl {
+		flex-direction: column;
+	}
+	/*--fin apartados--*/
+}
+@media (min-width: 335px) and (max-width: 600px){
+	/*--Encalces--*/
+	div#enlaces {
+		grid-area: left;
+		flex-direction: row;
+		width: auto;
+	}
+	div#lhistorico, div#lrecursos {
+		border-top: none;
+	}
+	/*--fin enlaces--*/
+}
+
+/*--fin queries--*/
